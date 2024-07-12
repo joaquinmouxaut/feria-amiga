@@ -4,7 +4,16 @@ module.exports = {
     "./src/**/*.{html,ts}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'rosa': '#FE86F2',
+      },
+      fontFamily: {
+        'primary': ['Barlow', 'sans-serif'],
+        'secondary': ['Squada One', 'sans-serif'],
+        'tertiary': ['Urbanist', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
