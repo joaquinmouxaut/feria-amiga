@@ -26,7 +26,7 @@ export class RegisterComponent implements OnInit {
     if (this.password === this.confirmPassword) {
       this.authService.register(this.email, this.password);
     } else {
-      console.log('Las contraseñas no coinciden');
+      alert('Passwords do not match');
     }
   }
 

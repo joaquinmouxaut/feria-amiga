@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { environment } from '../environments/environment';
+import { environment } from '../../environments/environment';
 import { initializeApp } from 'firebase/app';
-import { createUserWithEmailAndPassword, getAuth, sendEmailVerification } from 'firebase/auth';
+import { createUserWithEmailAndPassword, getAuth, sendEmailVerification, signInWithEmailAndPassword } from 'firebase/auth';
 import { Router } from '@angular/router';
 
 @Injectable({
@@ -22,4 +22,15 @@ export class AuthService {
     })
   }
 
+  async login(email: string, password: string) {
+    const result = await signInWithEmailAndPassword(this.auth, email, password);
+    this.router.navigate(['/private']);
+    return result;
+  }
+
+  async isAuthenticated(): Promise<boolean> {
+    const user = await this.auth.currentUser;
+    debugger;
+    return user !== null;
+  }
 }
