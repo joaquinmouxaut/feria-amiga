@@ -94,6 +94,23 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "feria-amiga:build:production",
+              "serveTarget": "feria-amiga:serve:production"
+            },
+            "development": {
+              "buildTarget": "feria-amiga:build:development",
+              "serveTarget": "feria-amiga:serve:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }

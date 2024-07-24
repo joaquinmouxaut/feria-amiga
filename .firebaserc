@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "feria-amiga"
+  },
+  "targets": {
+    "feria-amiga": {
+      "hosting": {
+        "feria-amiga": [
+          "feria-amiga"
+        ]
+      }
+    }
   }
 }

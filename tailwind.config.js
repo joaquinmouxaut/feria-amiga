@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       colors: {
         'rosa': '#FE86F2',
+        'naranja': '#FF5517',
       },
       fontFamily: {
         'primary': ['Barlow', 'sans-serif'],
