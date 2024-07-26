@@ -1,12 +1,12 @@
 <h1
-  class="font-black text-5xl w-fit mx-auto bg-naranja text-white px-8 py-3 rounded-2xl border-[3px] border-black shadow-md shadow-black uppercase"
+  class="font-black text-2xl sm:text-3xl sm:text-5xl w-fit mx-auto bg-naranja text-white px-8 py-3 rounded-2xl border-[3px] border-black shadow-md shadow-black uppercase"
 >
   Feria Virtual
 </h1>
 
-<div class="mt-7 flex justify-between">
+<div class="mt-7 grid grid-cols-2 sm:grid-cols-4 gap-4">
   @for ( category of categories; track category) {
-    <div class="w-fit">
+    <div class="w-fit mx-auto">
       <img
         src="{{ category.image }}"
         alt="flor_cocina"

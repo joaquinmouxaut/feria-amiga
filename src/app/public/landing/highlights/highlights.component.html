@@ -1,11 +1,11 @@
 <h1
-  class="font-black text-5xl w-fit mx-auto bg-rosa px-8 py-3 rounded-2xl border-[3px] border-black shadow-md shadow-black uppercase"
+  class="font-black text-3xl sm:text-5xl w-fit mx-auto bg-rosa px-8 py-3 rounded-2xl border-[3px] border-black shadow-md shadow-black uppercase"
 >
   Destacado del Mes
 </h1>
 
-<div class="mt-7 flex justify-between">
-  <div *ngFor="let highlight of highlights" class="w-fit">
+<div class="mt-7 grid grid-cols-2 sm:grid-cols-4 gap-4">
+  <div *ngFor="let highlight of highlights" class="w-fit mx-auto">
     <img
       src="{{ highlight.image }}"
       alt="flor_cocina"

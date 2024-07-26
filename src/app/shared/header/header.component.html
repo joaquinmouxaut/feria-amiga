@@ -13,10 +13,10 @@
     </div>
   </div>
 
-  <div [ngClass]="{'hidden': !isMenuOpen}" class="w-full lg:flex lg:items-center lg:w-auto mb-4">
+  <div [ngClass]="{'hidden': !isMenuOpen}" class="header w-full lg:flex lg:items-center lg:w-auto mb-4 absolute sm:relative z-10 bg-white sm:bg-none">
     <ul class="lg:w-full lg:flex lg:justify-between lg:space-x-4 font-secondary">
-      <li><a routerLink="/landing" class="block py-2 rounded cursor-pointer">Inicio</a></li>
-      <li><a routerLink="/quienes-somos" class="block py-2 rounded cursor-pointer">¿Quienes somos?</a></li>
+      <li><a routerLink="/landing" class="block py-2 rounded cursor-pointer" (click)="toggleMenu()">Inicio</a></li>
+      <li><a routerLink="/quienes-somos" class="block py-2 rounded cursor-pointer" (click)="toggleMenu()">¿Quienes somos?</a></li>
       <li><a routerLink="/" class="block py-2 rounded cursor-pointer">Inscripción</a></li>
       <li><a routerLink="/" class="block py-2 rounded cursor-pointer">Inscripción</a></li>
       <li><a routerLink="/" class="block py-2 rounded cursor-pointer">Media</a></li>

@@ -2,17 +2,17 @@
   class="font-black text-3xl w-fit bg-naranja text-white px-4 py-2 rounded-2xl border-[3px] border-black shadow-md shadow-black uppercase">
   Feria Virtual
 </h2>
-<h1 class="font-black text-7xl uppercase w-fit mx-auto text-naranja mt-8">
+<h1 class="font-black text-4xl sm:text-7xl uppercase w-fit mx-auto text-naranja mt-8">
   Emprendimientos
 </h1>
-<h3 class="font-extrabold text-4xl uppercase w-fit mx-auto text-naranja mt-5">
+<h3 class="font-extrabold text-2xl sm:text-4xl uppercase w-fit mx-auto text-naranja mt-5">
   Categorías
 </h3>
-<div class="grid grid-cols-3 gap-4 mt-8 mx-8">
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8 sm:mx-8">
   @for ( category of categories; track category) {
-  <div class="w-fit mt-6 mx-auto">
+  <div class="w-full sm:w-fit mt-6 mx-auto">
     <img src="{{ category.image }}" alt="flor_cocina"
-      class="w-80 h-[28rem] rounded-lg border-[2px] border-black border-[3px] shadow-md shadow-black object-cover cursor-pointer" />
+      class="w-full sm:w-80 h-56 sm:h-[28rem] rounded-lg border-[2px] border-black border-[3px] shadow-md shadow-black object-cover cursor-pointer" />
     <h2 class="text-2xl font-semibold mt-3 text-center font-tertiary uppercase">
       {{ category.title }}
     </h2>
