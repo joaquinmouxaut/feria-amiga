@@ -8,6 +8,7 @@ module.exports = {
       colors: {
         'rosa': '#FE86F2',
         'naranja': '#FF5517',
+        'lila': '#EF3DF3'
       },
       fontFamily: {
         'primary': ['Barlow', 'sans-serif'],
