@@ -13,7 +13,7 @@ export class HighlightsComponent implements OnInit {
     { image: 'assets/svg/flor_cocina.svg', title: 'Flor Cocina' },
     { image: 'assets/svg/vik_makrame.svg', title: 'Vik Makrame' },
     { image: 'assets/svg/camelia.svg', title: 'Camelia' },
-    { image: 'assets/svg/esto_tambien_es_arte.svg', title: 'Esto También es Arte' },
+    { image: 'assets/svg/esto_tambien_es_arte.svg', title: 'Sarasa' },
   ]
 
   constructor() { }

@@ -1,7 +1,7 @@
 <div class="relative w-full sm:max-w-[80%] mx-auto">
   <!-- Carousel wrapper -->
-  <div class="overflow-hidden relative h-44 sm:h-96 rounded-tr-lg rounded-bl-lg">
-    <div class="flex transition-transform duration-500 ease-in-out transform" [ngStyle]="{'transform': 'translateX(' + currentSlide * -100 + '%)'}">
+  <div class="overflow-hidden relative h-44 sm:h-96 sm:max-h-[30rem] rounded-tr-lg rounded-bl-lg">
+    <div class="flex transition-transform duration-500 ease-in-out transform h-[inherit]" [ngStyle]="{'transform': 'translateX(' + currentSlide * -100 + '%)'}">
       <div *ngFor="let image of images" class="w-full flex-shrink-0">
         <img [src]="image" class="w-full h-full object-cover" alt="Slide image">
       </div>
@@ -13,16 +13,16 @@
   </div>
   <!-- Slider controls -->
   <button (click)="prevSlide()" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-0 sm:px-2 cursor-pointer group focus:outline-none">
-    <span class="inline-flex items-center justify-center w-6 h-6 sm:w-10 sm:h:10 rounded-full bg-transparent group-hover:bg-transparent group-focus:ring-4 group-focus:ring-transparent">
-      <svg aria-hidden="true" class="w-6 h-6 sm:w-10 sm:h:10 text-lila" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <span class="inline-flex items-center justify-center w-6 h-6 sm:w-12 sm:h-12 rounded-full bg-transparent group-hover:bg-transparent group-focus:ring-4 group-focus:ring-transparent">
+      <svg aria-hidden="true" class="w-6 h-6 sm:w-12 sm:h-12 text-lila" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7"></path>
       </svg>
       <span class="sr-only">Previous</span>
     </span>
   </button>
   <button (click)="nextSlide()" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-0 sm:px-2 cursor-pointer group focus:outline-none">
-    <span class="inline-flex items-center justify-center w-6 h-6 sm:w-10 sm:h:10 rounded-full bg-transparent group-hover:bg-transparent group-focus:ring-4 group-focus:ring-transparent">
-      <svg aria-hidden="true" class="w-6 h-6 sm:w-10 sm:h:10 text-lila" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <span class="inline-flex items-center justify-center w-6 h-6 sm:w-12 sm:h-12 rounded-full bg-transparent group-hover:bg-transparent group-focus:ring-4 group-focus:ring-transparent">
+      <svg aria-hidden="true" class="w-6 h-6 sm:w-12 sm:h-12 text-lila" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"></path>
       </svg>
       <span class="sr-only">Next</span>
