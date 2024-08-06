@@ -4,14 +4,16 @@
   Destacado
 </h1>
 
-<div class="mt-7 flex gap-4 w-fit overflow-x-auto">
-  <div *ngFor="let highlight of highlights" class="w-24 cursor-pointer">
-    <img
+<div class="mt-7 w-100 overflow-x-auto scroll-hide">
+  <div class="flex gap-4 w-fit">
+    <div *ngFor="let highlight of highlights" class="w-24 cursor-pointer">
+      <img
       src="{{ highlight.image }}"
       alt="flor_cocina"
-    />
-    <h2 class="text-sm font-bold bg-black text-white text-center font-tertiary">
-      {{ highlight.title }}
-    </h2>
+      />
+      <h2 class="text-sm font-bold bg-black text-white text-center font-tertiary">
+        {{ highlight.title }}
+      </h2>
+    </div>
   </div>
 </div>
