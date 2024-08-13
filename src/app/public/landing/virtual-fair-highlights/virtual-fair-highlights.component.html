@@ -1,20 +1,28 @@
 <h1
-  class="font-black text-2xl sm:text-3xl sm:text-5xl w-fit mx-auto bg-naranja text-white px-8 py-3 rounded-2xl border-[3px] border-black shadow-md shadow-black uppercase"
+  class="font-black text-xl sm:text-5xl w-fit mx-auto bg-naranja text-white px-6 sm:px-8 py-1 rounded-md border-[3px] border-black shadow-md shadow-black uppercase"
 >
-  Feria Virtual
+  Emprendedores
 </h1>
 
-<div class="mt-7 grid grid-cols-2 sm:grid-cols-4 gap-4">
+<div class="mt-7 flex justify-between gap-4">
   @for ( category of categories; track category) {
     <div class="w-fit mx-auto">
-      <img
+      <div class="w-16 h-16 p-3 rounded-full mx-auto" [ngStyle]="{'background-color': category.backgroundColor}">
+        <img
         src="{{ category.image }}"
         alt="flor_cocina"
-        class="w-60 h-60 rounded-lg border-[2px] border-black shadow-sm shadow-black cursor-pointer"
-      />
-      <h2 class="text-2xl font-bold mt-3 text-center font-tertiary">
+        class="w-full h-full object-contain"
+        />
+      </div>
+      <h2 class="text-xs font-bold mt-2 text-center font-tertiary uppercase">
         {{ category.title }}
       </h2>
     </div>
   }  
+</div>
+
+<div class="mx-auto mt-4 w-fit">
+  <button class="shadow cursor-pointer">
+    <a routerLink="/landing" class="px-4 py-1 rounded-lg shadow-md uppercase text-center text-base font-semibold bg-naranja">Ver todo</a>  
+  </button>
 </div>
