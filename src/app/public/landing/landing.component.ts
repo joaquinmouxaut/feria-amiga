@@ -4,6 +4,7 @@ import { HighlightsComponent } from './highlights/highlights.component';
 import { VirtualFairHighlightsComponent } from './virtual-fair-highlights/virtual-fair-highlights.component';
 import { VirtualFairComponent } from './virtual-fair/virtual-fair.component';
 import { JoinUsComponent } from './join-us/join-us.component';
+import { FooterComponent } from '../../shared/footer/footer.component';
 
 @Component({
   selector: 'app-landing',
@@ -15,7 +16,8 @@ import { JoinUsComponent } from './join-us/join-us.component';
     HighlightsComponent,
     VirtualFairHighlightsComponent,
     VirtualFairComponent,
-    JoinUsComponent
+    JoinUsComponent,
+    FooterComponent
   ]
 })
 export default class LandingComponent implements OnInit {

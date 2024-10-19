@@ -1,12 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { HighlightsComponent } from '../highlights/highlights.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-virtual-fair-highlights',
   templateUrl: './virtual-fair-highlights.component.html',
   styleUrls: ['./virtual-fair-highlights.component.css'],
   standalone: true,
-  imports: [CommonModule]
+  imports: [CommonModule, HighlightsComponent, RouterModule]
 })
 export class VirtualFairHighlightsComponent implements OnInit {
   categories = [

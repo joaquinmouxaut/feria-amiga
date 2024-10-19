@@ -1,10 +1,10 @@
 <h1
-  class="font-black text-xl sm:text-5xl w-fit mx-auto bg-naranja text-white px-6 sm:px-8 py-1 rounded-md border-[3px] border-black shadow-md shadow-black uppercase"
+  class="font-black text-xl sm:text-5xl w-fit mx-auto px-6 sm:px-8 py-1 rounded-md border-[3px] border-black shadow-md shadow-black uppercase"
 >
   Emprendedores
 </h1>
 
-<div class="mt-7 flex justify-between gap-4">
+<div class="mt-5 flex justify-between gap-4">
   @for ( category of categories; track category) {
     <div class="w-fit mx-auto">
       <div class="w-16 h-16 p-3 rounded-full mx-auto" [ngStyle]="{'background-color': category.backgroundColor}">
@@ -23,6 +23,6 @@
 
 <div class="mx-auto mt-4 w-fit">
   <button class="shadow cursor-pointer">
-    <a routerLink="/landing" class="px-4 py-1 rounded-lg shadow-md uppercase text-center text-base font-semibold bg-naranja">Ver todo</a>  
+    <a routerLink="/feria-virtual" class="px-4 py-1 rounded-lg shadow-md uppercase text-center text-base font-semibold bg-naranja">Ver todo</a>  
   </button>
 </div>

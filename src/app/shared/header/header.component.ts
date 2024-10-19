@@ -11,6 +11,12 @@ import { RouterModule } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   isMenuOpen = false;
+  public routes = [
+    { path: '/landing', label: 'Inicio' },
+    { path: '/quienes-somos', label: '¿Quienes somos?' },
+    { path: '/feria-virtual', label: 'Feria Virtual' },
+    { path: '/preguntas-frecuentes', label: 'Preguntas Frecuentes' },
+  ]
 
   constructor() { }
 

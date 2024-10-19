@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   standalone: true
 })
 export class JoinUsComponent implements OnInit {
-  image: string = 'assets/svg/join_us.svg';
+  image: string = 'assets/svg/join-us.png';
 
   constructor() { }
 

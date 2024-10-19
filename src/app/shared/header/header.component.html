@@ -8,20 +8,16 @@
       </button>
     </div>
     
-    <div class="text-lg font-semibold mx-auto">
-      <img src="assets/logo.svg" alt="Logo" class="h-24">
+    <div class="text-lg font-semibold mx-auto" routerLink="/landing">
+      <img src="assets/logo.svg" alt="Logo" class="h-14">
     </div>
   </div>
 
   <div [ngClass]="{'hidden': !isMenuOpen}" class="header w-full lg:flex lg:items-center lg:w-auto mb-4 absolute sm:relative z-10 bg-white sm:bg-none">
     <ul class="lg:w-full lg:flex lg:justify-between lg:space-x-4 font-secondary">
-      <li><a routerLink="/landing" class="block py-2 rounded cursor-pointer" (click)="toggleMenu()">Inicio</a></li>
-      <li><a routerLink="/quienes-somos" class="block py-2 rounded cursor-pointer" (click)="toggleMenu()">¿Quienes somos?</a></li>
-      <li><a routerLink="/" class="block py-2 rounded cursor-pointer">Inscripción</a></li>
-      <li><a routerLink="/" class="block py-2 rounded cursor-pointer">Inscripción</a></li>
-      <li><a routerLink="/" class="block py-2 rounded cursor-pointer">Media</a></li>
-      <li><a routerLink="/preguntas-frecuentes" class="block py-2 rounded cursor-pointer" (click)="toggleMenu()">Preguntas Frecuentes</a></li>
-      <li><a routerLink="/" class="block py-2 rounded cursor-pointer">Contacto</a></li>
+      @for (route of routes; track route) {
+        <li><a routerLink="{{ route.path }}" class="block py-2 rounded cursor-pointer" (click)="toggleMenu()">{{ route.label }}</a></li>
+      }
     </ul>
   </div>
 </nav>
