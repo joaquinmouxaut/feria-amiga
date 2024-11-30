@@ -9,12 +9,13 @@
   </h1>
   <div class="mt-5 grid grid-cols-4 gap-4">
     @for ( category of categories; track category) {
-      <div class="w-fit mx-auto">
+      <div class="w-fit mx-auto" (click)="goCategory(category)">
         <div class="w-16 h-16 p-3 rounded-full mx-auto" [ngStyle]="{'background-color': category.backgroundColor}">
           <img
           src="{{ category.image }}"
           alt="flor_cocina"
           class="w-full h-full object-contain"
+          loading="lazy"
           />
         </div>
         <div class="flex h-6 mt-1 items-center justify-center">
