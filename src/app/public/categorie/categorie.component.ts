@@ -19,12 +19,40 @@ export class CategorieComponent implements OnInit {
   private route = inject(ActivatedRoute);
   private router = inject(Router);
   protected entrepreneurs: BusinessDataInterface[] = [
-    { image: 'assets/svg/flor_cocina.svg', title: 'Flor Cocina' },
-    { image: 'assets/svg/vik_makrame.svg', title: 'Vik Makrame' },
-    { image: 'assets/svg/camelia.svg', title: 'Camelia' },
-    { image: 'assets/svg/esto_tambien_es_arte.svg', title: 'Sarasa' },
+    {
+      image: 'assets/svg/flor_cocina.webp', title: 'Flor Cocina', products: [
+        { name: 'Producto 1', img: 'assets/svg/flor_cocina.webp', },
+        { name: 'Producto 2', img: 'assets/svg/vic_macrame.webp', },
+        { name: 'Producto 3', img: 'assets/svg/camelia.webp', },
+        { name: 'Producto 4', img: 'assets/svg/esto_tambien_es_arte.webp', },
+      ]
+    },
+    {
+      image: 'assets/svg/vic_macrame.webp', title: 'Vik Makrame', products: [
+        { name: 'Producto 1', img: 'assets/svg/flor_cocina.webp', },
+        { name: 'Producto 2', img: 'assets/svg/vic_macrame.webp', },
+        { name: 'Producto 3', img: 'assets/svg/camelia.webp', },
+        { name: 'Producto 4', img: 'assets/svg/esto_tambien_es_arte.webp', },
+      ]
+    },
+    {
+      image: 'assets/svg/camelia.webp', title: 'Camelia', products: [
+        { name: 'Producto 1', img: 'assets/svg/flor_cocina.webp', },
+        { name: 'Producto 2', img: 'assets/svg/vic_macrame.webp', },
+        { name: 'Producto 3', img: 'assets/svg/camelia.webp', },
+        { name: 'Producto 4', img: 'assets/svg/esto_tambien_es_arte.webp', },
+      ]
+    },
+    {
+      image: 'assets/svg/esto_tambien_es_arte.webp', title: 'Sarasa', products: [
+        { name: 'Producto 1', img: 'assets/svg/flor_cocina.webp', },
+        { name: 'Producto 2', img: 'assets/svg/vic_macrame.webp', },
+        { name: 'Producto 3', img: 'assets/svg/camelia.webp', },
+        { name: 'Producto 4', img: 'assets/svg/esto_tambien_es_arte.webp', },
+      ]
+    },
   ];
-  protected isModalOpen:boolean = false;
+  protected isModalOpen: boolean = false;
   protected selectedBusiness: BusinessDataInterface | null = null;
 
   constructor() { }

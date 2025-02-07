@@ -10,9 +10,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarouselComponent implements OnInit {
   images: string[] = [
-    'assets/svg/carousel_item_1.svg',
-    'assets/svg/carousel_item_1.svg',
-    'assets/svg/carousel_item_1.svg',
+    'assets/svg/carousel_item_1.webp',
+    'assets/svg/carousel_item_1.webp',
+    'assets/svg/carousel_item_1.webp',
   ];
   currentSlide: number = 0;
   interval: any;

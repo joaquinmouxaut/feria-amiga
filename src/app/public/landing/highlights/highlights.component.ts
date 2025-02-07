@@ -10,10 +10,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HighlightsComponent implements OnInit {
   highlights = [
-    { image: 'assets/svg/flor_cocina.svg', title: 'Flor Cocina' },
-    { image: 'assets/svg/vik_makrame.svg', title: 'Vik Makrame' },
-    { image: 'assets/svg/camelia.svg', title: 'Camelia' },
-    { image: 'assets/svg/esto_tambien_es_arte.svg', title: 'Sarasa' },
+    { image: 'assets/svg/flor_cocina.webp', title: 'Flor Cocina' },
+    { image: 'assets/svg/vic_macrame.webp', title: 'Vik Makrame' },
+    { image: 'assets/svg/camelia.webp', title: 'Camelia' },
+    { image: 'assets/svg/esto_tambien_es_arte.webp', title: 'Sarasa' },
   ]
 
   constructor() { }

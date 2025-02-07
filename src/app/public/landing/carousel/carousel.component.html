@@ -3,7 +3,7 @@
   <div class="overflow-hidden relative h-44 sm:h-96 sm:max-h-[30rem] rounded-tr-lg rounded-bl-lg">
     <div class="flex transition-transform duration-500 ease-in-out transform h-[inherit]" [ngStyle]="{'transform': 'translateX(' + currentSlide * -100 + '%)'}">
       <div *ngFor="let image of images" class="w-full flex-shrink-0">
-        <img [src]="image" class="w-full h-full object-cover" alt="Slide image" loading="lazy">
+        <img [src]="image" class="w-full h-full object-cover" alt="Slide image" loading="eager">
       </div>
     </div>
   </div>

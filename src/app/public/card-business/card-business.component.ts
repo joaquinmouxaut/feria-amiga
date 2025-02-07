@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { BusinessDataInterface } from '../../interfaces/business.interface';
+import { BusinessDataInterface, ProductInterface } from '../../interfaces/business.interface';
 
 @Component({
   selector: 'app-card-business',
@@ -10,10 +10,18 @@ import { BusinessDataInterface } from '../../interfaces/business.interface';
 export class CardBusinessComponent implements OnInit {
   @Input() businessData!: BusinessDataInterface;
   @Output() closeModal = new EventEmitter<void>();
+  currentProduct: ProductInterface | undefined;
 
   constructor() { }
 
   ngOnInit() {
+    if (this.businessData?.products?.length) {
+      this.currentProduct = this.businessData.products[0];
+    }
+  }
+  
+  selectProduct(product: { name: string; img: string }): void {
+    this.currentProduct = product;
   }
 
   close() {

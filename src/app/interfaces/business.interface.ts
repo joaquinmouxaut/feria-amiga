@@ -5,5 +5,10 @@ export interface BusinessDataInterface {
     facebook?: string;
     whatsapp?: string;
     tags?: string[];
-    products?: any[];
+    products?: ProductInterface[];
+}
+
+export interface ProductInterface {
+    name: string;
+    img: string;
 }
