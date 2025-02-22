@@ -1,30 +1,52 @@
-<div class="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-50">
-  <div class="bg-white rounded-lg shadow-lg w-11/12 max-w-2xl">
-    <div class="p-4 flex justify-between items-center border-b">
-      <h2 class="text-xl font-bold">{{ businessData.title }}</h2>
-      <button (click)="close()" class="text-gray-500 hover:text-red-500">Cerrar</button>
+<div
+  class="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-50"
+>
+  <div
+    class="bg-naranja rounded-lg shadow-lg border-black border-2 w-[95%] max-w-2xl aspect-[2/3] relative"
+  >
+    <div class="p-4 flex justify-end py-6 px-4 items-center w-full absolute z-10">
+      <h1
+        class="w-fit font-black text-xl sm:text-5xl px-6 sm:px-8 py-1 rounded-md border-[3px] border-black shadow-md shadow-black uppercase bg-white"
+      >
+        {{ businessData.title }}
+      </h1>
     </div>
 
-    <div class="carousel-container">
+    <div class="carousel-container h-5/6 relative">
       @if (currentProduct && currentProduct.img ) {
-        <div class="carousel">
-            <div 
-              class="carousel-image active"
-            >
-              <img [src]="currentProduct.img"/>
-            </div>
+      <div class="carousel w-full h-full">
+        <div class="carousel-image active">
+          <img [src]="currentProduct.img" />
         </div>
+      </div>
       }
-    
-      <div class="thumbnails">
+
+      <div class="thumbnails absolute bottom-5 p-[6px] gap-[6px] rounded-[4px] w-fit flex justify-center max-w-[90%] bg-gray-300">
         @for (product of businessData.products; track product) {
-          <img 
-            [src]="product.img"
-            [class.active-thumbnail]="product === currentProduct"
-            (click)="selectProduct(product)"
-          />
+        <img
+          [src]="product.img"
+          class="h-"
+          [class.active-thumbnail]="product === currentProduct"
+          (click)="selectProduct(product)"
+        />
         }
       </div>
     </div>
+
+    <div class="p-4 flex flex-col gap-4 justify-between">
+      <div class="flex justify-between items-center">
+        <h2 class="flex w-fit items-center font-medium text-sm sm:text-5xl py-1 px-1 gap-1 sm:px-8 rounded-md border-[3px] border-black shadow-md shadow-black uppercase bg-white">
+          <img src="assets/svg/facebook.svg" alt="Logo" class="w-4 h-4" loading="lazy">
+          {{ businessData.facebook }}</h2>
+        <h2 class="flex w-fit items-center font-medium text-sm sm:text-5xl py-1 px-1 gap-1 sm:px-8 rounded-md border-[3px] border-black shadow-md shadow-black uppercase bg-white">
+          <img src="assets/svg/instagram.svg" alt="Logo" class="w-4 h-4" loading="lazy">
+          {{ businessData.instagram }}</h2>
+      </div>
+      <div>
+        <h2 class="flex w-fit items-center font-medium text-sm sm:text-5xl py-1 px-1 gap-1 sm:px-8 rounded-md border-[3px] border-black shadow-md shadow-black uppercase bg-white">
+          <img src="assets/svg/whatsapp.svg" alt="Logo" class="w-4 h-4" loading="lazy">
+          {{ businessData.whatsapp }}
+        </h2>
+      </div>
   </div>
 </div>

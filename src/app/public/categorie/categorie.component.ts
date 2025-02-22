@@ -25,7 +25,7 @@ export class CategorieComponent implements OnInit {
         { name: 'Producto 2', img: 'assets/svg/vic_macrame.webp', },
         { name: 'Producto 3', img: 'assets/svg/camelia.webp', },
         { name: 'Producto 4', img: 'assets/svg/esto_tambien_es_arte.webp', },
-      ]
+      ], facebook: '/florcocina', instagram: '/florcocina', whatsapp: '+5491131234567',
     },
     {
       image: 'assets/svg/vic_macrame.webp', title: 'Vik Makrame', products: [
