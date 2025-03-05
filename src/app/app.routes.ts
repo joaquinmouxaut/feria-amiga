@@ -11,12 +11,12 @@ import { CategorieComponent } from './public/categorie/categorie.component';
 
 export const routes: Routes = [
    { path: '', redirectTo: 'landing', pathMatch: 'full' },
-   { path: 'landing', component: LandingComponent },
-   { path: 'feria-virtual', component: VirtualFairComponent},
-   { path: 'categoria/:categorie', component: CategorieComponent},
-   { path: 'quienes-somos', component: AboutUsComponent },
-   { path: 'preguntas-frecuentes', component: FaqComponent },
-   { path: 'login', component: LoginComponent },
-   { path: 'register', component: RegisterComponent },
-   { path: 'private', component: PrivateComponent, canActivate: [authGuard] }
+   { path: 'landing', component: LandingComponent, data: { animation: 'home' } },
+   { path: 'feria-virtual', component: VirtualFairComponent, data: { animation: 'virtual-fair' } },
+   { path: 'categoria/:categorie', component: CategorieComponent, data: { animation: 'categorie' } },
+   { path: 'quienes-somos', component: AboutUsComponent, data: { animation: 'about-us' } },
+   { path: 'preguntas-frecuentes', component: FaqComponent, data: { animation: 'faq' } },
+   { path: 'login', component: LoginComponent, data: { animation: 'login' } },
+   { path: 'register', component: RegisterComponent, data: { animation: 'register' } },
+   { path: 'private', component: PrivateComponent, canActivate: [authGuard], data: { animation: 'private' } },
 ];

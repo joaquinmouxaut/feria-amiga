@@ -20,4 +20,14 @@ export const CATEGORIES: CategoryInterface[] = [
   { image: 'assets/svg/button.svg', title: 'Marroquinería', backgroundColor: '#F85217', route: 'marroquineria' },
   { image: 'assets/svg/ball.svg', title: 'Pastelería', backgroundColor: '#F85217', route: 'pasteleria' },
   { image: 'assets/svg/strawberry.svg', title: 'Ropa Hombres', backgroundColor: '#B76BE0', route: 'ropa-hombres' },
+
+  { image: 'assets/svg/ring.svg', title: 'Ropa infantil', backgroundColor: '#F85217', route: 'ropa-infantil' },
+  { image: 'assets/svg/button.svg', title: 'Ropa Mujer', backgroundColor: '#FF60FD', route: 'ropa-mujer' },
+  { image: 'assets/svg/ball.svg', title: 'Catálogo', backgroundColor: '#B76BE0', route: 'catalogo' },
+  { image: 'assets/svg/strawberry.svg', title: 'Regionales', backgroundColor: '#FFE838', route: 'regionales' },
+
+  { image: 'assets/svg/ring.svg', title: 'Sin TACC', backgroundColor: '#FF60FD', route: 'sin-tacc' },
+  { image: 'assets/svg/button.svg', title: '420', backgroundColor: '#B76BE0', route: '420' },
+  { image: 'assets/svg/ball.svg', title: '---------', backgroundColor: '#FFE838', route: '---------' },
+  { image: 'assets/svg/strawberry.svg', title: '---------', backgroundColor: '#F85217', route:  '---------' },
 ];

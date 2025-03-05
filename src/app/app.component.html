@@ -1,4 +1,6 @@
 <div class="container mx-auto p-4">
   <app-header></app-header>
-  <router-outlet/>
+  <div [@routeAnimation]="getRouteAnimationState(outlet)">
+    <router-outlet #outlet="outlet"></router-outlet>
+  </div>
 </div>
