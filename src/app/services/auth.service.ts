@@ -30,7 +30,6 @@ export class AuthService {
 
   async isAuthenticated(): Promise<boolean> {
     const user = await this.auth.currentUser;
-    debugger;
     return user !== null;
   }
 }

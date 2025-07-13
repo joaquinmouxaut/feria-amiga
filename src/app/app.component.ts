@@ -35,7 +35,6 @@ export class AppComponent implements OnInit {
 
   // Método para obtener el estado de la animación según la ruta activa
   getRouteAnimationState(outlet: RouterOutlet) {
-    debugger;
     return outlet?.activatedRouteData?.['animation'] || '';
   }
 }

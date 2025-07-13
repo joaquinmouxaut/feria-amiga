@@ -4,6 +4,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+  font-family: 'StretchPro';
+  src: url('assets/fonts/stretchpro-webfont.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 body {
   font-family: "Barlow", sans-serif;

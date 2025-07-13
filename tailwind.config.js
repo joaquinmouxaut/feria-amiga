@@ -15,6 +15,7 @@ module.exports = {
         'primary': ['Barlow', 'sans-serif'],
         'secondary': ['Squada One', 'sans-serif'],
         'tertiary': ['Urbanist', 'sans-serif'],
+        'quaternary': ['StretchPro', 'sans-serif'],
       },
     },
   },

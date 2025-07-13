@@ -4,14 +4,14 @@
 
 <div class="mt-5 pb-3">
     <h1
-        class="font-black text-xl sm:text-5xl w-fit mx-auto px-6 sm:px-8 py-1 rounded-md border-[3px] border-black uppercase">
+        class="font-quaternary font-black text-xl sm:text-5xl w-fit mx-auto px-6 sm:px-8 py-1 rounded-md border-[3px] border-black uppercase">
         {{ categorie }}
     </h1>
     <div class="mt-5 grid grid-cols-2 gap-4">
         @for (entrepreneur of entrepreneurs; track entrepreneur) {
         <div class="w-full cursor-pointer" (click)="openModal(entrepreneur)">
             <img src="{{ entrepreneur.image }}" loading="lazy" />
-            <h2 class="text-sm font-bold bg-black text-white text-center font-tertiary">
+            <h2 class="text-sm font-semibold bg-black text-white text-center">
                 {{ entrepreneur.title }}
             </h2>
         </div>

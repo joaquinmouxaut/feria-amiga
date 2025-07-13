@@ -15,7 +15,6 @@ export class CardBusinessComponent implements OnInit {
   @HostListener('document:click', ['$event'])
   onClickOutside(event: Event) {
     if (!this.canDetectOutsideClick) return;
-    debugger;
     const target = event.target as HTMLElement;
     const cardElement = document.querySelector('.card-container');
 
