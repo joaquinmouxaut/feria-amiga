@@ -1,20 +1,23 @@
 <h1
-  class="font-quaternary font-black text-xl sm:text-5xl w-fit mx-auto px-6 sm:px-8 py-1 rounded-md border-[3px] border-black uppercase"
+  class="font-quaternary font-black text-xl sm:text-5xl w-fit sm:w-[36rem] text-center mx-auto px-6 sm:px-8 py-1 rounded-md border-[3px] border-black uppercase"
 >
   Destacados
 </h1>
 
 <div class="mt-5 w-100 overflow-x-auto scroll-hide">
-  <div class="flex gap-4 w-fit mb-1">
-    <div *ngFor="let highlight of highlights" class="w-24 cursor-pointer">
-      <img
-      src="{{ highlight.image }}"
-      alt="flor_cocina"
-      loading="lazy"
-      />
-      <h2 class="text-sm font-medium bg-black text-white text-center">
-        {{ highlight.title }}
-      </h2>
-    </div>
+  <div class="flex gap-4 w-full mb-1 justify-between sm:w-[90%] sm:mx-auto">
+    @for (highlight of highlights; track highlight) {
+      <div class="cursor-pointer">
+        <img
+        src="{{ highlight.image }}"
+        alt="flor_cocina"
+        loading="lazy"
+        class="w-[15rem] h-[18rem] rounded-lg shadow-black shadow-md border-black border-2 border-b-4 border-r-4"
+        />
+        <h2 class="text-sm font-semibold text-center mt-1">
+          {{ highlight.title }}
+        </h2>
+      </div>
+    }
   </div>
 </div>

@@ -11,6 +11,8 @@ import { RouterModule } from '@angular/router';
   imports: [CommonModule, HighlightsComponent, RouterModule]
 })
 export class VirtualFairHighlightsComponent implements OnInit {
+
+
   categories = [
     { image: 'assets/svg/ring.svg', title: 'Accesorios', backgroundColor: '#F85217' },
     { image: 'assets/svg/button.svg', title: 'Indumentaria', backgroundColor: '#FF60FD' },

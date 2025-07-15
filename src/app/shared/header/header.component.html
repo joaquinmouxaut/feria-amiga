@@ -1,4 +1,4 @@
-<nav>
+<nav class="container mx-auto p-4">
   <div class="container mx-auto flex justify-center items-center relative">
     <div class="lg:hidden absolute left-0">
       <button (click)="toggleMenu()" class="focus:outline-none">
@@ -13,10 +13,12 @@
     </div>
   </div>
 
-  <div [ngClass]="{'hidden': !isMenuOpen}" class="header w-full lg:flex lg:items-center lg:w-auto mb-4 absolute sm:relative z-10 bg-white sm:bg-none">
+  <div [ngClass]="{'hidden': !isMenuOpen}" class="header w-full lg:flex lg:items-center lg:w-auto mb-4 lg:mt-6 absolute sm:relative z-10 bg-white sm:bg-none">
     <ul class="lg:w-full lg:flex lg:justify-between lg:space-x-4 font-secondary">
       @for (route of routes; track route) {
-        <li><a routerLink="{{ route.path }}" class="block py-2 rounded cursor-pointer" (click)="toggleMenu()">{{ route.label }}</a></li>
+        <li class="lg:flex lg:items-center lg:px-3 lg:first:border-l-0 lg:border-l-2 lg:border-gray-950">
+          <a routerLink="{{ route.path }}" class="block py-2 rounded cursor-pointer" (click)="toggleMenu()">{{ route.label }}</a>
+        </li>
       }
     </ul>
   </div>

@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './highlights.component.html',
   styleUrls: ['./highlights.component.css'],
   standalone: true,
-  imports: [CommonModule]
 })
 export class HighlightsComponent implements OnInit {
   highlights = [

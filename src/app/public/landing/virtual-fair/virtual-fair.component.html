@@ -4,11 +4,11 @@
 
 <div class="mt-5 pb-3">
   <h1
-    class="font-quaternary font-black text-xl sm:text-5xl w-fit mx-auto px-6 sm:px-8 py-1 rounded-md border-[3px] border-black uppercase">
-    Emprendedores
+    class="font-quaternary font-black text-xl sm:text-5xl w-fit sm:w-[36rem] text-center mx-auto px-6 sm:px-8 py-1 rounded-md border-[3px] border-black uppercase">
+    Categorias
   </h1>
-  <div class="mt-5 grid grid-cols-4 gap-4">
-    @for ( category of categories; track category) {
+  <div class="mt-5 grid grid-cols-4 sm:grid-cols-5 gap-4">
+    @for (category of categoriesToShow; track category) {
       <div class="w-fit mx-auto" (click)="goCategory(category)">
         <div class="w-16 h-16 p-3 rounded-full mx-auto" [ngStyle]="{'background-color': category.backgroundColor}">
           <img
@@ -27,9 +27,17 @@
     }  
   </div>
 </div>
-<div class="pt-5 pb-3">
-  <app-join-us></app-join-us>
-</div>
-<div class="pt-5 pb-10">
-  <app-footer></app-footer>
-</div>
+@if (isLanding) {
+  <div class="mx-auto mt-4 w-fit">
+    <button class="cursor-pointer">
+      <a routerLink="/feria-virtual" class="px-3 py-1 rounded-lg uppercase text-center text-sm font-semibold bg-naranja text-white tracking-[1px]">Ver más</a>  
+    </button>
+  </div>
+} @else {
+  <div class="pt-5 pb-3">
+    <app-join-us></app-join-us>
+  </div>
+  <div class="pt-5 pb-10">
+    <app-footer></app-footer>
+  </div>
+}

@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
-  styleUrls: ['./carousel.component.css'],
+  styleUrls: ['./carousel.component.scss'],
   standalone: true,
   imports: [CommonModule]
 })
