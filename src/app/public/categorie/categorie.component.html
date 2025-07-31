@@ -1,17 +1,37 @@
-<div class="mt-5">
+<div class="container mx-auto">
+    <div class="w-[90%] mx-auto">
+        <button class="cursor-default">
+            <a
+                class="px-3 py-1 rounded-lg shadow-black shadow-md border-black border-2 border-b-4 border-r-4 uppercase text-center text-sm font-semibold bg-naranja text-white tracking-[1px]">Feria
+                virtual</a>
+        </button>
+    </div>
+</div>
+
+<div class="container mx-auto mt-5">
     <app-highlights></app-highlights>
 </div>
 
-<div class="mt-5 pb-3">
-    <h1
-        class="font-quaternary font-black text-xl sm:text-5xl w-fit mx-auto px-6 sm:px-8 py-1 rounded-md border-[3px] border-black uppercase">
-        {{ categorie }}
-    </h1>
-    <div class="mt-5 grid grid-cols-2 gap-4">
+<div class="container mx-auto mt-5 pb-3">
+    <div class="flex justify-between py-6 items-center w-full sm:w-[90%] sm:mx-auto z-10">
+        <div class="w-fit py-3 sm:py-5 cursor-pointer" (click)="goToPreviousCategory()">
+            <img src="assets/svg/chevron_orange_left.svg" alt="Logo" class="h-8" loading="lazy" />
+        </div>
+        <h1
+            class="font-quaternary font-black text-xl sm:text-5xl w-fit sm:w-[36rem] text-center mx-auto px-6 sm:px-8 py-1 rounded-lg shadow-black shadow-md border-black border-2 border-b-4 border-r-4 uppercase">
+            {{ categorie }}
+        </h1>
+        <div class="w-fit py-3 sm:py-5 cursor-pointer" (click)="goToNextCategory()">
+            <img src="assets/svg/chevron_orange_right.svg" alt="Logo" class="h-8" loading="lazy" />
+        </div>
+    </div>
+
+    <div class="flex gap-4 w-full mb-1 justify-between sm:w-[90%] sm:mx-auto mt-5">
         @for (entrepreneur of entrepreneurs; track entrepreneur) {
-        <div class="w-full cursor-pointer" (click)="openModal(entrepreneur)">
-            <img src="{{ entrepreneur.image }}" loading="lazy" />
-            <h2 class="text-sm font-semibold bg-black text-white text-center">
+        <div class="cursor-pointer" (click)="openModal(entrepreneur)">
+            <img src="{{ entrepreneur.image }}" loading="lazy"
+                class="w-[15rem] h-[18rem] rounded-lg shadow-black shadow-md border-black border-2 border-b-4 border-r-4" />
+            <h2 class="text-sm font-semibold text-center mt-1">
                 {{ entrepreneur.title }}
             </h2>
         </div>
@@ -26,8 +46,6 @@
 </div>
 
 @if (isModalOpen && selectedBusiness) {
-    <app-card-business
-        [businessData]="selectedBusiness"
-        (closeModal)="closeModal()">
-    </app-card-business>    
+<app-card-business [businessData]="selectedBusiness" (closeModal)="closeModal()">
+</app-card-business>
 }

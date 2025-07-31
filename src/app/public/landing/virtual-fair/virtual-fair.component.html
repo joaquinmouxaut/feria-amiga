@@ -1,15 +1,25 @@
-<div class="mt-5">
+@if (!isLanding) {
+  <div class="container mx-auto">
+    <div class="w-[90%] mx-auto">
+      <button class="cursor-default">
+        <a class="px-3 py-1 rounded-lg shadow-black shadow-md border-black border-2 border-b-4 border-r-4 uppercase text-center text-sm font-semibold bg-naranja text-white tracking-[1px]">Feria virtual</a>  
+      </button>
+    </div>
+  </div>
+}
+
+<div class="container mx-auto mt-5">
   <app-highlights></app-highlights>
 </div>
 
-<div class="mt-5 pb-3">
+<div class="container mx-auto mt-5 pb-3">
   <h1
-    class="font-quaternary font-black text-xl sm:text-5xl w-fit sm:w-[36rem] text-center mx-auto px-6 sm:px-8 py-1 rounded-md border-[3px] border-black uppercase">
+    class="font-quaternary font-black text-xl sm:text-5xl w-fit sm:w-[36rem] text-center mx-auto px-6 sm:px-8 py-1 rounded-lg shadow-black shadow-md border-black border-2 border-b-4 border-r-4  uppercase">
     Categorias
   </h1>
   <div class="mt-5 grid grid-cols-4 sm:grid-cols-5 gap-4">
     @for (category of categoriesToShow; track category) {
-      <div class="w-fit mx-auto" (click)="goCategory(category)">
+      <div class="w-fit mx-auto cursor-pointer" (click)="goCategory(category)">
         <div class="w-16 h-16 p-3 rounded-full mx-auto" [ngStyle]="{'background-color': category.backgroundColor}">
           <img
           src="{{ category.image }}"

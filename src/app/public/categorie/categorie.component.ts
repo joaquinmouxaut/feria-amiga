@@ -12,7 +12,12 @@ import { CardBusinessComponent } from '../card-business/card-business.component'
   templateUrl: './categorie.component.html',
   styleUrls: ['./categorie.component.scss'],
   standalone: true,
-  imports: [HighlightsComponent, JoinUsComponent, FooterComponent, CardBusinessComponent]
+  imports: [
+    HighlightsComponent,
+    JoinUsComponent,
+    FooterComponent,
+    CardBusinessComponent,
+  ],
 })
 export class CategorieComponent implements OnInit {
   protected categorie!: string;
@@ -20,51 +25,62 @@ export class CategorieComponent implements OnInit {
   private router = inject(Router);
   protected entrepreneurs: BusinessDataInterface[] = [
     {
-      image: 'assets/svg/flor_cocina.webp', title: 'Flor Cocina', products: [
-        { name: 'Producto 1', img: 'assets/svg/flor_cocina.webp', },
-        { name: 'Producto 2', img: 'assets/svg/vic_macrame.webp', },
-        { name: 'Producto 3', img: 'assets/svg/camelia.webp', },
-        { name: 'Producto 4', img: 'assets/svg/esto_tambien_es_arte.webp', },
-      ], facebook: '/florcocina', instagram: '/florcocina', whatsapp: '+5491131234567',
+      image: 'assets/svg/flor_cocina.webp',
+      title: 'Flor Cocina',
+      products: [
+        { name: 'Producto 1', img: 'assets/svg/flor_cocina.webp' },
+        { name: 'Producto 2', img: 'assets/svg/vic_macrame.webp' },
+        { name: 'Producto 3', img: 'assets/svg/camelia.webp' },
+        { name: 'Producto 4', img: 'assets/svg/esto_tambien_es_arte.webp' },
+      ],
+      facebook: '/florcocina',
+      instagram: '/florcocina',
+      whatsapp: '+5491131234567',
     },
     {
-      image: 'assets/svg/vic_macrame.webp', title: 'Vik Makrame', products: [
-        { name: 'Producto 1', img: 'assets/svg/flor_cocina.webp', },
-        { name: 'Producto 2', img: 'assets/svg/vic_macrame.webp', },
-        { name: 'Producto 3', img: 'assets/svg/camelia.webp', },
-        { name: 'Producto 4', img: 'assets/svg/esto_tambien_es_arte.webp', },
-      ]
+      image: 'assets/svg/vic_macrame.webp',
+      title: 'Vik Makrame',
+      products: [
+        { name: 'Producto 1', img: 'assets/svg/flor_cocina.webp' },
+        { name: 'Producto 2', img: 'assets/svg/vic_macrame.webp' },
+        { name: 'Producto 3', img: 'assets/svg/camelia.webp' },
+        { name: 'Producto 4', img: 'assets/svg/esto_tambien_es_arte.webp' },
+      ],
     },
     {
-      image: 'assets/svg/camelia.webp', title: 'Camelia', products: [
-        { name: 'Producto 1', img: 'assets/svg/flor_cocina.webp', },
-        { name: 'Producto 2', img: 'assets/svg/vic_macrame.webp', },
-        { name: 'Producto 3', img: 'assets/svg/camelia.webp', },
-        { name: 'Producto 4', img: 'assets/svg/esto_tambien_es_arte.webp', },
-      ]
+      image: 'assets/svg/camelia.webp',
+      title: 'Camelia',
+      products: [
+        { name: 'Producto 1', img: 'assets/svg/flor_cocina.webp' },
+        { name: 'Producto 2', img: 'assets/svg/vic_macrame.webp' },
+        { name: 'Producto 3', img: 'assets/svg/camelia.webp' },
+        { name: 'Producto 4', img: 'assets/svg/esto_tambien_es_arte.webp' },
+      ],
     },
     {
-      image: 'assets/svg/esto_tambien_es_arte.webp', title: 'Sarasa', products: [
-        { name: 'Producto 1', img: 'assets/svg/flor_cocina.webp', },
-        { name: 'Producto 2', img: 'assets/svg/vic_macrame.webp', },
-        { name: 'Producto 3', img: 'assets/svg/camelia.webp', },
-        { name: 'Producto 4', img: 'assets/svg/esto_tambien_es_arte.webp', },
-      ]
+      image: 'assets/svg/esto_tambien_es_arte.webp',
+      title: 'Sarasa',
+      products: [
+        { name: 'Producto 1', img: 'assets/svg/flor_cocina.webp' },
+        { name: 'Producto 2', img: 'assets/svg/vic_macrame.webp' },
+        { name: 'Producto 3', img: 'assets/svg/camelia.webp' },
+        { name: 'Producto 4', img: 'assets/svg/esto_tambien_es_arte.webp' },
+      ],
     },
   ];
   protected isModalOpen: boolean = false;
   protected selectedBusiness: BusinessDataInterface | null = null;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
     this.getCategorie();
   }
 
   private getCategorie() {
-    this.route.params.subscribe(params => {
+    this.route.params.subscribe((params) => {
       const categorie = params['categorie'];
-      const validRoutes = CATEGORIES.map(category => category.route);
+      const validRoutes = CATEGORIES.map((category) => category.route);
 
       if (validRoutes.includes(categorie)) {
         this.categorie = categorie;
@@ -84,4 +100,23 @@ export class CategorieComponent implements OnInit {
     this.selectedBusiness = null;
   }
 
+  goToPreviousCategory() {
+    const currentIndex = CATEGORIES.findIndex(
+      (cat) => cat.route === this.categorie
+    );
+    if (currentIndex > 0) {
+      const prevCategory = CATEGORIES[currentIndex - 1];
+      this.router.navigate([`/categoria/${prevCategory.route}`]);
+    }
+  }
+
+  goToNextCategory() {
+    const currentIndex = CATEGORIES.findIndex(
+      (cat) => cat.route === this.categorie
+    );
+    if (currentIndex < CATEGORIES.length - 1) {
+      const nextCategory = CATEGORIES[currentIndex + 1];
+      this.router.navigate([`/categoria/${nextCategory.route}`]);
+    }
+  }
 }
