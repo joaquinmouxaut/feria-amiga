@@ -14,6 +14,8 @@ export class HeaderComponent implements OnInit {
   public routes = [
     { path: '/landing', label: 'Inicio' },
     { path: '/quienes-somos', label: '¿Quienes somos?' },
+    { path: '/presencial', label: 'Feria Presencial' },
+    { path: '/virtual', label: 'Feria Virtual' },
     { path: '/inscripcion', label: 'Inscripción' },
     { path: '/media', label: 'Media' },
     { path: '/preguntas-frecuentes', label: 'Preguntas Frecuentes' },

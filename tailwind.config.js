@@ -17,6 +17,9 @@ module.exports = {
         'tertiary': ['Urbanist', 'sans-serif'],
         'quaternary': ['StretchPro', 'sans-serif'],
       },
+      fontSize: {
+        'm': ['15px']
+      }
     },
   },
   plugins: [],
